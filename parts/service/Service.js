@@ -1,0 +1,12 @@
+!function(){"use strict";class e{constructor(){this.pathToServicesImages="img/dist/services",this.containerEl=document.querySelector(".service__container"),this.sliderEl=document.querySelector("#service-slider"),this.wrapperEl=document.querySelector("#service-slider .swiper-wrapper"),this.settings={slidesPerView:"auto",speed:1200,freeMode:!0,watchSlidesProgress:!0,scrollbar:{el:".swiper-scrollbar",draggable:!0},breakpoints:{320:{spaceBetween:8},769:{spaceBetween:20}}}}setIndentsElems(){var e=window.getComputedStyle(this.containerEl).marginLeft;this.sliderEl.style.marginLeft=e,this.sliderEl.style.marginRight=e}insertServicesIntoPage(e){let s="";for(var t of e)s+=this.getServiceMarkup(t);this.wrapperEl.insertAdjacentHTML("beforeend",s),this.setEqualHeightListElems(),this.addWindowResizeListener(),this.addSliderServices(),this.setIndentsElems()}getServiceMarkup(e){var s=this.getPriceServiceMarkup(e),t=this.getBenefitsServiceMarkup(e);return`
+			<div class="swiper-slide">
+				<div class="service__card" style="background: center / cover no-repeat url(${this.pathToServicesImages}/${e.image});">
+					<h3 class="h3 service__card-title">${e.name}</h3>
+					<ul class="service__card-list">
+						${t}
+					</ul>
+					${s}
+					<button type="button" class="button service__card-button button__feedback" data-value="Проконсультироваться: ${e.name}">Проконсультироваться</button>
+				</div>
+			</div>
+			`}getPriceServiceMarkup(e){return null!=e.price?`<span class="service__price service__card-price">от<b class="service__price_bold">${e.price}</b>руб.</span>`:'<span class="service__price service__card-price"><b class="service__price_bold">&nbsp;</b></span>'}getBenefitsServiceMarkup(e){let s="";for(var t of e.benefits)s+=`<li class="service__list-item">${t}</li>`;return s}setEqualHeightListElems(){var s=document.querySelectorAll(".service__card-list"),t=document.querySelectorAll(".service__card-title");let i=0;for(let e=0;e<s.length;e++)s[e].style.height="auto";for(let e=0;e<s.length;e++){var r=s[e].offsetHeight+t[e].offsetHeight;i=Math.max(i,r)}for(let e=0;e<s.length;e++)s[e].style.height=i-t[e].offsetHeight+"px"}addWindowResizeListener(){window.addEventListener("resize",()=>{this.setEqualHeightListElems(),this.setIndentsElems()})}addSliderServices(){new Swiper("#service-slider",this.settings)}}window.addEventListener("load",()=>{(new e).insertServicesIntoPage(services)})}();
