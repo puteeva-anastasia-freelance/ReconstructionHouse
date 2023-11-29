@@ -1,0 +1,1 @@
+"use strict";class ServiceDTO{constructor(i,s,t,e,c){this.id=i,this.name=s,this.benefits=t,this.price=e,this.image=c}}

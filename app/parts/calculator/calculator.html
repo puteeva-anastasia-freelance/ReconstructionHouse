@@ -1,0 +1,73 @@
+<section class="calculator" id="calculator">
+	<div class="container">
+		<h2 class="h2">Онлайн-калькулятор</h2>
+		<p class="txt calculator__txt">Узнайте примерную стоимость Вашего проекта за&nbsp;1&nbsp;минуту</p>
+		<form class="calculator__wrap form-calculator">
+			<input type="hidden" name="name-form" value="Узнать примерную стоимость проекта">
+			<div class="calculator__question">
+				<label for="area" class="calculator__label">1. Введите площадь Вашего дома в&nbsp;м<sup>2</sup></label>
+				<input name="area" type="number" placeholder="Например, 75" id="area" class="calculator__input" min="1">
+			</div>
+			<div class="calculator__question">
+				<label for="floor" class="calculator__label">2. Сколько в&nbsp;доме этажей?</label>
+				<input name="floor" type="number" placeholder="Введите число этажей" id="floor" class="calculator__input"
+					min="1">
+			</div>
+			<div class="calculator__question">
+				<label for="type-project" class="calculator__label">3. Выберите тип проекта</label>
+				<select name="type-project" id="type-project">
+					<option class="service-empty" label="Выберите значение"></option>
+					<!-- Пункты услуг будут добавлены сюда с помощью JS -->
+					<option value="Нужна консультация">Нужна консультация</option>
+				</select>
+			</div>
+			<div class="calculator__question calculator__question_reconstruction">
+				<label class="calculator__label calculator__label_reconstruction">4. Какая реконструкция планируется?</label>
+				<div class="calculator__choose">
+					<div class="calculator__checkbox">
+						<input type="checkbox" name="reconstruction-1" value="Изменение площади" id="area_change"
+							class="calculator__checkbox-input">
+						<label for="area_change" class="calculator__checkbox-label">Изменение площади</label>
+					</div>
+					<div class="calculator__checkbox">
+						<input type="checkbox" name="reconstruction-4" value="Изменение назначения помещений" id="assignment_change"
+							class="calculator__checkbox-input">
+						<label for="assignment_change" class="calculator__checkbox-label">Изменение назначения помещений</label>
+					</div>
+					<div class="calculator__checkbox">
+						<input type="checkbox" name="reconstruction-6" value="Изменение количества жилых комнат"
+							id="quantity_change" class="calculator__checkbox-input">
+						<label for="quantity_change" class="calculator__checkbox-label">Изменение количества жилых комнат</label>
+					</div>
+					<div class="calculator__checkbox">
+						<input type="checkbox" name="reconstruction-2" value="Изменение конструкции крыши" id="roof_change"
+							class="calculator__checkbox-input">
+						<label for="roof_change" class="calculator__checkbox-label">Изменение конструкции крыши</label>
+					</div>
+					<div class="calculator__checkbox">
+						<input type="checkbox" name="reconstruction-5" value="Надстройка этажей" id="struct_floor"
+							class="calculator__checkbox-input">
+						<label for="struct_floor" class="calculator__checkbox-label">Надстройка этажей</label>
+					</div>
+					<div class="calculator__checkbox">
+						<input type="checkbox" name="reconstruction-7" value="Другое" id="other" class="calculator__checkbox-input">
+						<label for="other" class="calculator__checkbox-label">Другое</label>
+					</div>
+					<div class="calculator__checkbox">
+						<input type="checkbox" name="reconstruction-3" value="Разделение дома на квартиры" id="separation_house"
+							class="calculator__checkbox-input">
+						<label for="separation_house" class="calculator__checkbox-label">Разделение дома на&nbsp;квартиры</label>
+					</div>
+				</div>
+			</div>
+			<div class="calculator__question">
+				<label for="phone" class="calculator__label">5. Ваш номер телефона*</label>
+				<input name="phone" required class="calculator__input mask-phone" type="text"
+					placeholder="Введите Ваш номер телефона" id="phone">
+			</div>
+			<span class="txt calculator__error calculator__error-phone">Для отправки формы, пожалуйста, укажите Ваш номер
+				телефона</span>
+			<button type="submit" class="button button__accent calculator__button">рассчитать стоимость</button>
+		</form>
+	</div>
+</section>

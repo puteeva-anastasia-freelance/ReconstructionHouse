@@ -1,0 +1,400 @@
+.calculator
+	background-color: #F7F7F7
+	padding: 49px 0 31px
+
+	@media (max-width: 768px)
+		padding: 20px 0 31px
+
+	&__txt
+		margin-top: 32px
+
+		@media (max-width: 1500px)
+			margin-top: 20px
+
+		@media (max-width: 768px)
+			margin-top: 17px
+
+		@media (max-width: 412px)
+			margin-top: 10px
+			margin-bottom: -3px
+
+	&__wrap
+		border: 1px solid #A7A7A7
+		box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25)
+		border-radius: 5px
+		max-width: 1125px
+		padding: 25px 43px 49px
+		box-sizing: border-box
+		margin: 60px auto 0
+		background-color: #fff
+
+		@media (max-width: 1500px)
+			max-width: 614px
+			margin: 41px auto 0
+			padding: 23px 36px 41px
+
+		@media (max-width: 768px)
+			margin: 20px auto 0
+			padding: 10px 15px 27px
+
+		@media (max-width: 412px)
+			padding: 14px 9px 38px
+
+	&__question
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 23px
+
+		@media (max-width: 1500px)
+			flex-direction: column
+			align-items: flex-start
+			margin-bottom: 20px
+
+		@media (max-width: 768px)
+			margin-bottom: 16px
+
+		&:last-of-type
+			margin-bottom: 0
+
+		&_reconstruction
+			display: block
+			margin-top: 35px
+			margin-bottom: 11px
+
+			@media (max-width: 1500px)
+				margin-top: 25px
+
+			@media (max-width: 768px)
+				margin-top: 0
+				margin-bottom: 4px
+
+			@media (max-width: 412px)
+				margin-bottom: 11px
+
+	&__label
+		font-weight: 600
+		font-size: 18px
+
+		@media (max-width: 1500px)
+			font-size: 17px
+			margin-bottom: 3px
+
+		@media (max-width: 768px)
+			font-size: 14px
+
+		@media (max-width: 576px)
+			font-size: 12px
+
+		@media (max-width: 412px)
+			margin-bottom: 4px
+			line-height: 12px
+
+		&_reconstruction
+			display: block
+			margin-bottom: 22px
+
+			@media (max-width: 1500px)
+				margin-bottom: 25px
+
+			@media (max-width: 768px)
+				margin-bottom: 21px
+
+			@media (max-width: 412px)
+				margin-bottom: 7px
+
+	&__input
+		width: 60.3%
+		color: #333
+		border: 1px solid #A7A7A7
+		border-radius: 5px
+		height: 45px
+		font-weight: 500
+		font-size: 15px
+		font-family: $default-font
+		box-sizing: border-box
+		padding: 0 0 0 17px
+		display: flex
+		align-items: center
+		position: relative
+		cursor: pointer
+		transition: border-color .2s ease-in-out
+
+		@media (max-width: 1500px)
+			width: 100%
+
+		@media (max-width: 768px)
+			height: 37px
+			padding: 0 0 0 18px
+			font-size: 12px
+
+		@media (max-width: 412px)
+			padding: 0 0 0 12px
+
+		&:hover
+			border: 1px solid $accent
+
+		&:focus
+			border-color: $accent
+			outline: 1px solid $accent
+
+		&::-webkit-input-placeholder
+			font-weight: 300
+			font-style: italic
+			color: #A7A7A7
+
+		&::-moz-placeholder
+			font-weight: 300
+			font-style: italic
+			color: #A7A7A7
+
+		&:-moz-placeholder
+			font-weight: 300
+			font-style: italic
+			color: #A7A7A7
+
+		&:-ms-input-placeholder
+			font-weight: 300
+			font-style: italic
+			color: #A7A7A7
+
+	.selectize-control
+		width: 60.3%
+		height: 45px
+		box-sizing: border-box
+
+		@media (max-width: 1500px)
+			width: 100%
+
+		@media (max-width: 768px)
+			height: 37px
+
+		&.single
+			.selectize-input
+				&:after
+					width: 20px
+					height: 12px
+					background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 26 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2492 15.1466C12.6474 15.5992 13.3526 15.5992 13.7508 15.1466L25.3955 1.91053C25.9639 1.26452 25.5052 0.25 24.6447 0.25H1.35528C0.494848 0.25 0.0361407 1.26452 0.604482 1.91053L12.2492 15.1466Z' fill='%23A7A7A7'/%3E%3C/svg%3E%0A")
+					background-repeat: no-repeat
+					border: 0
+					right: 13px
+					top: 45%
+
+					@media (max-width: 768px)
+						height: 11px
+						right: 8px
+						width: 17px
+						background-size: contain
+
+				&.input-active
+					background-color: transparent
+
+					&::after
+						transform: rotate(180deg)
+
+	.selectize-input
+		box-shadow: none
+		height: 100%
+		background-color: transparent
+		border: 1px solid #a7a7a7
+		border-radius: 5px
+		padding-left: 17px
+		transition: border-color .2s ease-in-out
+		display: flex!important
+		align-items: center
+
+		@media (max-width: 412px)
+			padding-left: 12px
+			display: flex
+			align-items: center
+			padding-bottom: 0
+			padding-top: 0
+
+		&:hover
+			border: 1px solid $accent
+
+		&:focus
+			border-color: $accent
+			outline: 1px solid $accent
+
+		.item
+			font-size: 15px
+			font-weight: 500
+			color: #333
+			font-style: normal
+			line-height: 19px
+
+			@media (max-width: 768px)
+				font-size: 12px
+				line-height: 13px
+
+			@media (max-width: 412px)
+				line-height: 11px
+
+		#type-project-selectized
+			font-style: italic
+			font-weight: 300
+			font-size: 15px
+			position: absolute
+			left: 17px
+
+			@media (max-width: 768px)
+				font-size: 12px
+
+			@media (max-width: 412px)
+				left: 12px
+
+			&::-webkit-input-placeholder
+				color: #A7A7A7
+
+			&::-moz-placeholder
+				color: #A7A7A7
+
+			&:-moz-placeholder
+				color: #A7A7A7
+
+			&:-ms-input-placeholder
+				color: #A7A7A7
+
+	.selectize-dropdown-content
+		outline: 1px solid rgba(167, 167, 167, 0.3)
+		padding-top: 4px
+		padding-bottom: 5px
+
+		.option
+			font-size: 15px
+			font-weight: 500
+			color: #333
+			padding: 6px 0 6px 15px
+
+			&.active
+				color: #fff
+				background-color: $accent
+
+			@media (max-width: 768px)
+				font-size: 12px
+
+	&__checkbox
+		width: calc(100% / 3)
+		margin-bottom: 23px
+
+		&:hover
+			.calculator__checkbox-label
+				color: $accent
+
+		@media (max-width: 1500px)
+			width: 100%
+			margin-bottom: 17px
+
+			&:nth-of-type(1)
+				order: 1
+
+			&:nth-of-type(3)
+				order: 2
+
+			&:nth-of-type(5)
+				order: 3
+
+			&:nth-of-type(7)
+				order: 4
+
+			&:nth-of-type(2)
+				order: 5
+
+			&:nth-of-type(4)
+				order: 6
+
+			&:nth-of-type(6)
+				order: 7
+
+			&:nth-of-type(8)
+				order: 100
+
+		@media (max-width: 768px)
+			margin-bottom: 16px
+
+		@media (max-width: 412px)
+			margin-bottom: 2px
+
+		&-input
+			display: none
+
+			&:checked + .calculator__checkbox-label::before
+				background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.6455 0.489424C17.364 0.49781 17.0969 0.615437 16.9007 0.817386L5.74999 11.9681L2.18261 8.40072C2.08278 8.29675 1.96322 8.21374 1.83091 8.15656C1.6986 8.09937 1.55622 8.06916 1.41209 8.0677C1.26796 8.06623 1.12499 8.09354 0.991551 8.14802C0.858109 8.2025 0.736879 8.28305 0.63496 8.38497C0.533041 8.48689 0.452483 8.60812 0.398003 8.74156C0.343523 8.87501 0.316217 9.01798 0.317683 9.1621C0.319149 9.30623 0.349359 9.44862 0.406542 9.58092C0.463726 9.71323 0.546734 9.8328 0.650706 9.93262L4.98404 14.266C5.18721 14.469 5.46272 14.5831 5.74999 14.5831C6.03726 14.5831 6.31277 14.469 6.51594 14.266L18.4326 2.34929C18.5891 2.19712 18.6961 2.00121 18.7394 1.78723C18.7826 1.57325 18.7603 1.35118 18.6752 1.15013C18.5901 0.94908 18.4463 0.778423 18.2625 0.660525C18.0788 0.542627 17.8637 0.482988 17.6455 0.489424Z' fill='%23FF9B1D'/%3E%3C/svg%3E ")
+				background-repeat: no-repeat
+				background-position: center
+
+		&-label
+			padding-left: 35px
+			font-size: 15px
+			position: relative
+			cursor: pointer
+			transition: color .2s ease-in-out
+
+			@media (max-width: 1500px)
+				font-size: 14px
+
+			@media (max-width: 768px)
+				font-size: 11px
+				padding-left: 30px
+
+			@media (max-width: 412px)
+				min-height: 30px
+				display: flex
+				align-items: center
+
+			&::before
+				content: ""
+				display: block
+				width: 23px
+				height: 23px
+				border: 2px solid #A7A7A7
+				position: absolute
+				left: 0
+				bottom: -2px
+				border-radius: 2px
+				box-sizing: border-box
+
+				@media (max-width: 768px)
+					bottom: -5px
+
+				@media (max-width: 412px)
+					bottom: 3px
+
+	&__choose
+		display: flex
+		flex-wrap: wrap
+
+	&__button
+		display: block
+		margin: 0 auto
+		margin-top: 45px
+		font-family: $default-font
+		cursor: pointer
+
+		@media (max-width: 1500px)
+			margin: 29px auto 0
+
+		@media (max-width: 768px)
+			font-size: 13px
+			padding: 12px
+
+		@media (max-width: 412px)
+			margin: 25px auto 0
+
+	&__error
+		display: none
+		font-size: 15px
+		color: $red
+		font-weight: 500
+		line-height: 144%
+		width: 100%
+		margin-top: 15px
+		margin-bottom: -15px
+		font-style: normal
+
+		@media (max-width: 1500px)
+			font-size: 14px
+
+		@media (max-width: 768px)
+			font-size: 11px

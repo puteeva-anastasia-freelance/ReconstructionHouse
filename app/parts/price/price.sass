@@ -1,0 +1,242 @@
+.price
+	padding-top: 50px
+	padding-bottom: 80px
+	background: center / cover no-repeat url(../img/dist/bg-price-450.webp)
+
+	@media (min-width: 450px)
+		background-image: url(../img/dist/bg-price-768.webp)
+
+	@media (min-width: 768px)
+		background-image: url(../img/dist/bg-price.webp)
+
+	@media (max-width: 768px)
+		padding-top: 21px
+		padding-bottom: 24px
+
+	@media (max-width: 485px)
+		padding-bottom: 35px
+
+	&__title
+		color: #fff
+
+	&__txt
+		color: #fff
+		margin-top: 31px
+
+		@media (max-width: 1500px)
+			margin-top: 18px
+
+		@media (max-width: 1250px)
+			margin-bottom: 44px
+
+		@media (max-width: 768px)
+			margin-top: 8px
+			margin-bottom: 21px
+
+		@media (max-width: 485px)
+			margin-top: 9px
+			margin-bottom: 17px
+
+	&__wrap
+		background: #FFF
+		border: 1px solid $accent
+		border-radius: 5px
+		padding: 23px 32px 55px 32px
+		position: relative
+
+		@media (max-width: 1250px)
+			width: 600px
+			margin: 0 auto
+			padding: 0
+			padding-bottom: 35px
+
+		@media (max-width: 880px)
+			width: 100%
+
+		@media (max-width: 576px)
+			padding: 0 0 53px
+
+		@media (max-width: 485px)
+			padding: 0 0 64px
+
+	&__table
+		@media (max-width: 1250px)
+			display: flex
+
+		&-str
+			display: flex
+			padding-bottom: 17px
+
+			@media (max-width: 1250px)
+				flex-direction: column
+				width: 50%
+
+			&_grey
+				background-color: rgba(217, 217, 217, 0.2)
+				border-radius: 5px 5px 0px 0px
+				border-bottom: 1px solid rgba(167, 167, 167, 0.7)
+				padding-top: 17px
+				padding-bottom: 0
+
+				@media (max-width: 1250px)
+					background-color: #fff
+					padding-top: 0
+					border: 0
+
+				.price__table-col
+					padding-bottom: 17px
+					padding-top: 0
+					margin-top: -4px
+
+					@media (max-width: 1250px)
+						padding: 6px 0
+
+					@media (max-width: 485px)
+						padding: 9px 0
+
+						&:nth-child(2)
+							margin-top: 5px
+
+					&::before
+						bottom: 0
+						top: auto
+
+						@media (max-width: 1250px)
+							display: none
+
+				.price__table-title
+					padding-top: 0
+
+					@media (max-width: 1250px)
+						padding: 28px 0 18px
+
+					@media (max-width: 768px)
+						padding: 26px 0 20px 0
+
+					@media (max-width: 485px)
+						padding: 13px 0 11px
+
+					@media (max-width: 340px)
+						padding-left: 17px
+						padding-right: 17px
+
+						&::before
+							right: 0
+
+							@media (max-width: 768px)
+								left: auto
+
+		&-title
+			font-weight: 500
+			font-size: 18px
+			display: block
+			width: 31.9%
+			padding-left: 8.7%
+			box-sizing: border-box
+			padding-top: 19px
+
+			@media (max-width: 1600px)
+				padding-left: 6.7%
+
+			@media (max-width: 1500px)
+				padding-left: 4.7%
+
+			@media (max-width: 1250px)
+				width: 100%
+				text-align: center
+				background-color: rgba(217, 217, 217, 0.2)
+				padding: 28px 0 18px
+				position: relative
+
+			@media (max-width: 768px)
+				font-size: 17px
+				padding: 26px 0px 20px 0px
+
+			@media (max-width: 485px)
+				font-size: 12px
+				padding: 13px 0px 11px
+
+			@media (max-width: 340px)
+				padding-left: 17px
+				padding-right: 17px
+
+				&::before
+					content: ''
+					display: block
+					width: 87.87%
+					height: 0.5px
+					border-top: 0.5px solid rgba(167, 167, 167, 0.7)
+					position: absolute
+					bottom: -0.5px
+
+					@media (max-width: 768px)
+						left: 0
+						width: 92%
+
+					@media (max-width: 485px)
+						width: 81.1%
+
+		&-col
+			font-size: 18px
+			width: 14.1%
+			text-align: center
+			padding-top: 19px
+			position: relative
+
+			@media (max-width: 1500px)
+				width: 17.1%
+
+			@media (max-width: 1250px)
+				width: 100%
+				padding: 6px 0
+				box-sizing: border-box
+
+			@media (max-width: 485px)
+				font-size: 14px
+				padding: 8px 0
+
+				&:nth-child(2)
+					margin-top: 8px
+
+					@media (max-width: 485px)
+						margin-top: 9px
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				height: 35px
+				width: 0.5px
+				background-color: rgba(167, 167, 167, 0.7)
+				top: 0
+
+				@media (max-width: 1250px)
+					height: 146px
+					top: -54px
+
+				@media (max-width: 576px)
+					height: 108px
+					top: -62px
+
+				@media (max-width: 485px)
+					top: -50px
+					height: 95px
+
+	&__button
+		position: absolute
+		bottom: -25px
+		left: 0
+		right: 0
+		margin: 0 auto
+		width: fit-content
+
+		@media (max-width: 1250px)
+			bottom: -20px
+
+		@media (max-width: 576px)
+			font-size: 13px
+			padding: 12px 20px
+			bottom: 11px
+
+		@media (max-width: 485px)
+			bottom: 21px

@@ -1,0 +1,277 @@
+.step
+	padding-top: 49px
+	padding-bottom: 65px
+
+	@media (max-width: 1240px)
+		padding-bottom: 44px
+
+	@media (max-width: 768px)
+		padding-top: 20px
+		padding-bottom: 17px
+
+	&__title
+		margin-bottom: 32px
+
+		@media (max-width: 1240px)
+			margin-bottom: -1px
+
+		@media (max-width: 450px)
+			margin-bottom: 14px
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		width: 1320px
+		margin: 0 auto
+		margin-top: 35px
+		position: relative
+
+		@media (max-width: 1400px)
+			width: 1120px
+
+		@media (max-width: 1240px)
+			flex-direction: column
+			width: 100%
+			margin-top: 35px
+			padding-top: 32px
+			padding-bottom: 17px
+
+		@media (max-width: 768px)
+			margin-top: 29px
+			padding-top: 16px
+			padding-bottom: 10px
+
+		@media (max-width: 450px)
+			margin-top: 23px
+			padding-top: 0
+			padding-bottom: 2px
+
+		&::after
+			content: ''
+			display: block
+			border-top: 2px dashed #E89D46
+			width: 90.3%
+			position: absolute
+			top: 50.3%
+			left: 0
+			right: 0
+			margin: 0 auto
+
+			@media (max-width: 1400px)
+				top: 52%
+
+			@media (max-width: 1240px)
+				display: none
+
+		&::before
+			@media (max-width: 1240px)
+				content: ''
+				display: block
+				border-left: 2px dashed #E89D46
+				width: 2px
+				height: 100%
+				top: 0
+				position: absolute
+				left: 3px
+				right: 0
+				margin: 0 auto
+
+			@media (max-width: 450px)
+				right: auto
+				left: 12px
+
+	&__item
+		border: 1px solid rgba(232, 157, 70, 0.3)
+		border-radius: 3px
+		width: 306px
+		box-sizing: border-box
+		padding: 14px 24px 14px 24px
+		position: relative
+
+		@media (max-width: 1400px)
+			padding: 14px
+			width: 263px
+			height: 371px
+
+		@media (max-width: 1240px)
+			border: 0
+			min-height: auto
+			height: auto
+			width: 100%
+			display: flex
+			padding: 0
+			justify-content: space-between
+			margin-bottom: 32px
+
+		@media (max-width: 768px)
+			margin-bottom: 25px
+
+		@media (max-width: 450px)
+			flex-direction: column
+			padding-left: 35px
+			margin-top: -5px
+			margin-bottom: 19px
+
+			&-top
+				flex-direction: column-reverse
+
+		&::after
+			content: ''
+			width: 17px
+			height: 17px
+			border: 2px solid rgb(250, 235, 218)
+			background-color: $accent
+			position: absolute
+			display: block
+			top: 47.4%
+			border-radius: 50%
+			left: 0
+			right: 0
+			margin: 0 auto
+
+			@media (max-width: 1400px)
+				top: 49.6%
+
+			@media (max-width: 1240px)
+				top: 39%
+
+			@media (max-width: 768px)
+				top: 42%
+
+			@media (max-width: 450px)
+				left: 3px
+				right: auto
+				top: 14%
+
+	&__number
+		font-weight: 700
+		font-size: 20px
+		color: $accent
+		text-align: center
+		width: 100%
+		display: block
+		margin-top: -15px
+		margin-bottom: -2px
+
+		@media (max-width: 1400px)
+			margin-top: 8px
+			margin-bottom: 5px
+
+		@media (max-width: 1240px)
+			margin: 0
+			text-align: start
+
+		@media (max-width: 768px)
+			margin-left: 9px
+
+		@media (max-width: 450px)
+			font-size: 15px
+			margin-left: 0
+			margin-bottom: 5px
+
+		&_top
+			margin-bottom: 14px
+			margin-top: 4px
+
+			@media (max-width: 1400px)
+				margin-bottom: 23px
+
+			@media (max-width: 1240px)
+				margin: 0
+				text-align: end
+
+			@media (max-width: 768px)
+				margin-right: 9px
+
+			@media (max-width: 450px)
+				text-align: left
+				margin-bottom: 5px
+
+	&__txt
+		line-height: 15px
+		margin-top: 17px
+		margin-left: 4px
+		margin-bottom: 21px
+		font-size: 12px
+
+		@media (max-width: 1240px)
+			margin: 0
+
+	&__inner
+		margin-top: 32px
+
+		@media (max-width: 1400px)
+			margin-top: 19px
+
+		@media (max-width: 1240px)
+			height: auto
+			width: 32.7%
+			padding-left: 27px
+			box-sizing: border-box
+			margin-right: 5.3%
+			margin-top: 0
+			align-items: center
+			display: flex
+			flex-wrap: wrap
+			position: relative
+			width: 50%
+
+		@media (max-width: 768px)
+			width: 50%
+			margin: 0
+			padding-left: 18px
+
+		@media (max-width: 450px)
+			padding-left: 0
+			width: 100%
+
+		&_top
+			min-height: 48.3%
+			margin-top: 0
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+
+			@media (max-width: 1400px)
+				height: 182px
+				margin-top: 0
+
+			@media (max-width: 1240px)
+				height: auto
+				min-height: auto
+				text-align: end
+				padding-right: 27px
+				padding-left: 0
+				margin-left: 5.3%
+				margin-right: 0
+				align-items: center
+				flex-direction: row
+
+			@media (max-width: 768px)
+				margin: 0
+				padding-right: 17px
+
+			@media (max-width: 450px)
+				text-align: left
+				padding-right: 0
+				justify-content: flex-start
+
+	&__img
+		width: 151px
+		height: 101px
+		margin: 0 auto
+		margin-top: 4px
+
+		@media (max-width: 1240px)
+			display: none
+
+	&__subtitle
+		margin-left: 4px
+
+		@media (max-width: 1240px)
+			margin-bottom: 17px
+			margin-left: 0
+
+		@media (max-width: 450px)
+			font-size: 13px
+			margin-bottom: 14px

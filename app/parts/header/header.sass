@@ -1,0 +1,286 @@
+.bg-header
+	background: center / cover no-repeat url("../img/dist/bg-header-450.webp")
+
+	@media (min-width: 450px)
+		background-image: url("../img/dist/bg-header-768.webp")
+
+	@media (min-width: 768px)
+		background-image: url("../img/dist/bg-header.webp")
+
+.main-header
+	background-color: rgba(255, 255, 255, 0.9)
+	box-shadow: 0px 6px 18px rgba(51, 51, 51, 0.1)
+	padding-top: 16px
+	position: relative
+
+	@media (max-width: 992px)
+		background-color: #fff
+		padding-top: 12px
+		padding-bottom: 11px
+		left: 0
+		position: fixed
+		top: 0
+		width: 100%
+		z-index: 999
+
+	&.active
+		z-index: 1001
+
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+		@media (max-width: 992px)
+			align-items: center
+
+	&__logo
+		text-transform: uppercase
+		font-weight: 400
+		font-size: 15px
+		line-height: 100%
+		text-decoration: none
+		color: #383838
+		font-family: 'Lato', sans-serif
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin-top: 2px
+
+		@media (max-width: 992px)
+			width: 170px
+			height: 40px
+			margin-top: 0
+
+			svg
+				height: 100%
+
+		@media (max-width: 500px)
+			width: 140px
+			height: 33px
+
+		&-img
+			display: block
+			border: 1px solid #A7A7A7
+			background-color: #FFFFFF
+			width: 44px
+			height: 44px
+			margin-right: 5px
+
+			@media (max-width: 992px)
+				width: 31px
+				height: 31px
+
+			@media (max-width: 576px)
+				width: 20px
+				height: 20px
+
+		&-txt
+			margin-top: 2px
+
+			@media (max-width: 576px)
+				font-size: 9px
+				margin-top: 0
+				line-height: 9px
+
+	&__phone
+		display: flex
+
+		@media (max-width: 992px)
+			display: none
+
+		&-call
+			display: flex
+			flex-direction: column
+			align-items: center
+
+		&-icon
+			text-decoration: none
+			margin-left: -9px
+			margin-right: 10px
+
+			&:hover
+				.main-header__phone-icon-svg
+					fill: $red
+
+			&-svg
+				fill: #434343
+				transition: fill .2s ease-in-out
+
+		&-number
+			font-weight: 700
+			font-size: 18px
+			color: $red
+			text-decoration: none
+
+			&:hover
+				text-decoration: underline
+
+		&-order
+			margin-top: 6px
+			margin-right: 2px
+
+	&__menu
+		background-color: #FFF
+		padding: 11px 0
+		margin-top: 9px
+
+		&.default
+			.main-header__phone
+				display: none
+
+		&.fixed
+			position: fixed
+			top: 0
+			width: 100%
+			z-index: 101
+			margin-top: 0
+			box-shadow: 0px 6px 18px rgba(51, 51, 51, 0.1)
+			display: none
+
+			&.active
+				display: block
+
+				@media (max-width: 992px)
+					display: none
+
+			.container
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+			@media (max-width: 1550px)
+				.main-header__phone-icons
+					display: none
+
+			@media (max-width: 1450px)
+				.main-header__link
+					font-size: 12px
+
+				.main-header__phone-number
+					font-size: 15px
+
+				.main-header__phone-order
+					padding: 7px 12px
+
+			@media (max-width: 1350px)
+				.main-header__item
+					margin-right: 34px
+
+			@media (max-width: 1250px)
+				.main-header__item
+					margin-right: 22px
+
+			@media (max-width: 1150px)
+				.main-header__item
+					margin-right: 20px
+
+				.main-header__link
+					font-size: 11px
+
+			@media (max-width: 1050px)
+				.main-header__item
+					margin-right: 13px
+
+		@media (max-width: 992px)
+			display: none
+
+	&__list
+		list-style-type: none
+		padding: 0
+		display: flex
+		margin: 0
+
+	&__item
+		margin-right: 53px
+
+		&:last-of-type
+			margin-right: 0
+
+		@media (max-width: 1215px)
+			margin-right: 28px
+
+		@media (max-width: 1050px)
+			margin-right: 19px
+
+	&__link
+		text-decoration: none
+		font-weight: 500
+		font-size: 14px
+		color: inherit
+		transition: color .2s ease-in-out
+
+		&.active
+			color: $red
+
+		&:hover
+			color: $accent
+
+	&__mobile
+		display: none
+
+		@media (max-width: 992px)
+			display: flex
+			align-items: center
+
+		&-phone
+			display: none
+
+			@media (max-width: 450px)
+				display: block
+				margin-right: 23px
+
+		&-order
+			margin-top: 0
+			margin-right: 29px
+
+			@media (max-width: 576px)
+				font-size: 11px
+				padding: 5px 14px
+
+			@media (max-width: 450px)
+				display: none
+
+		&-burger
+			padding: 0
+			display: none
+			width: 35px
+
+			@media (max-width: 992px)
+				display: block
+				margin-right: -6px
+
+				&.cross
+					background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.69434 1.69446L24.3054 24.3056' stroke='black' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24.3054 1.69446L1.69434 24.3056' stroke='black' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+					height: 17px
+					background-size: contain
+					background-repeat: no-repeat
+					background-position: center
+
+					svg
+						display: none
+
+	&__mobile-menu
+		position: absolute
+		right: 0
+		border-top: 1px solid $red
+		background-color: #fff
+		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25)
+		overflow: hidden
+		box-sizing: border-box
+		z-index: 100
+		width: 0
+		padding: 0
+		transition: width .2s ease-in-out
+
+		@media (max-width: 992px)
+			&.active
+				width: auto
+				padding: 6px 15px 38px
+
+		.main-header__list
+			flex-direction: column
+
+		.main-header__item
+			padding: 8px 0
+			margin: 0
